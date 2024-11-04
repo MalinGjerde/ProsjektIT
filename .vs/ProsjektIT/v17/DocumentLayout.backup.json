@@ -1,7 +1,27 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\H\u00F8gskulen p\u00E5 Vestlandet\\ELE301 Industriell IT - Dag\\db-tilgang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ELE301 - Industriell IT\\ProsjektIT\\.vs\\tasks.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\tasks.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ELE301 - Industriell IT\\ProsjektIT\\ProsjektITDatabase.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProsjektITDatabase.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32A4D79E-7181-441E-8395-5739CFE67927}|Kortleser\\Kortleser.csproj|d:\\ele301 - industriell it\\prosjektit\\kortleser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32A4D79E-7181-441E-8395-5739CFE67927}|Kortleser\\Kortleser.csproj|solutionrelative:kortleser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D15E7B7-D16D-4912-A589-2EC6A39BC5AC}|Sentral_Program\\Sentral_Program.csproj|d:\\ele301 - industriell it\\prosjektit\\sentral_program\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D15E7B7-D16D-4912-A589-2EC6A39BC5AC}|Sentral_Program\\Sentral_Program.csproj|solutionrelative:sentral_program\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +29,77 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ELE301 - Industriell IT\\ProsjektIT\\Sentral_Program\\Program.cs",
+              "RelativeDocumentMoniker": "Sentral_Program\\Program.cs",
+              "ToolTip": "D:\\ELE301 - Industriell IT\\ProsjektIT\\Sentral_Program\\Program.cs",
+              "RelativeToolTip": "Sentral_Program\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T11:56:28.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ELE301 - Industriell IT\\ProsjektIT\\Kortleser\\Program.cs",
+              "RelativeDocumentMoniker": "Kortleser\\Program.cs",
+              "ToolTip": "D:\\ELE301 - Industriell IT\\ProsjektIT\\Kortleser\\Program.cs",
+              "RelativeToolTip": "Kortleser\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T11:54:52.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "tasks.vs.json",
+              "DocumentMoniker": "D:\\ELE301 - Industriell IT\\ProsjektIT\\.vs\\tasks.vs.json",
+              "RelativeDocumentMoniker": ".vs\\tasks.vs.json",
+              "ToolTip": "D:\\ELE301 - Industriell IT\\ProsjektIT\\.vs\\tasks.vs.json",
+              "RelativeToolTip": ".vs\\tasks.vs.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-04T11:52:40.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "db-tilgang.cs",
+              "DocumentMoniker": "D:\\H\u00F8gskulen p\u00E5 Vestlandet\\ELE301 Industriell IT - Dag\\db-tilgang.cs",
+              "RelativeDocumentMoniker": "..\\..\\H\u00F8gskulen p\u00E5 Vestlandet\\ELE301 Industriell IT - Dag\\db-tilgang.cs",
+              "ToolTip": "D:\\H\u00F8gskulen p\u00E5 Vestlandet\\ELE301 Industriell IT - Dag\\db-tilgang.cs",
+              "RelativeToolTip": "..\\..\\H\u00F8gskulen p\u00E5 Vestlandet\\ELE301 Industriell IT - Dag\\db-tilgang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T11:51:43.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProsjektITDatabase.sql",
+              "DocumentMoniker": "D:\\ELE301 - Industriell IT\\ProsjektIT\\ProsjektITDatabase.sql",
+              "RelativeDocumentMoniker": "ProsjektITDatabase.sql",
+              "ToolTip": "D:\\ELE301 - Industriell IT\\ProsjektIT\\ProsjektITDatabase.sql",
+              "RelativeToolTip": "ProsjektITDatabase.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-04T11:50:32.557Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
