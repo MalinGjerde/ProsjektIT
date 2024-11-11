@@ -17,6 +17,8 @@ namespace Kortleser_program
         private static Socket clientSocket;
         private static SerialPort serialPort;
 
+
+        //test
         static bool e5;
         static bool e6;
         static bool e7;

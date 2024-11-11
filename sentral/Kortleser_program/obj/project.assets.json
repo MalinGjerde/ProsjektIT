@@ -238,11 +238,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ELE301 - Industriell IT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
+      "projectUniqueName": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
       "projectName": "Kortleser_program",
-      "projectPath": "D:\\ELE301 - Industriell IT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
+      "projectPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
       "packagesPath": "C:\\Users\\s-ti-\\.nuget\\packages\\",
-      "outputPath": "D:\\ELE301 - Industriell IT\\sentral\\Kortleser_program\\obj\\",
+      "outputPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\s-ti-\\AppData\\Roaming\\NuGet\\NuGet.Config",

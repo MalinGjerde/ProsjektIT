@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ELE301 - Industriell IT\\sentral\\sentral\\sentral.csproj": {}
+    "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj": {}
   },
   "projects": {
-    "D:\\ELE301 - Industriell IT\\sentral\\sentral\\sentral.csproj": {
+    "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ELE301 - Industriell IT\\sentral\\sentral\\sentral.csproj",
+        "projectUniqueName": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
         "projectName": "sentral",
-        "projectPath": "D:\\ELE301 - Industriell IT\\sentral\\sentral\\sentral.csproj",
+        "projectPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
         "packagesPath": "C:\\Users\\s-ti-\\.nuget\\packages\\",
-        "outputPath": "D:\\ELE301 - Industriell IT\\sentral\\sentral\\obj\\",
+        "outputPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\s-ti-\\AppData\\Roaming\\NuGet\\NuGet.Config",

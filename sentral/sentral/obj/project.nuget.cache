@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "96cJgzO5b60=",
+  "dgSpecHash": "ivo6VS8jHDQ=",
   "success": true,
-  "projectFilePath": "D:\\ELE301 - Industriell IT\\sentral\\sentral\\sentral.csproj",
+  "projectFilePath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\s-ti-\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\s-ti-\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",

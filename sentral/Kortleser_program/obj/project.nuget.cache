@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "btpUC3PNdAI=",
+  "dgSpecHash": "mVK10w3hmO4=",
   "success": true,
-  "projectFilePath": "D:\\ELE301 - Industriell IT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
+  "projectFilePath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\s-ti-\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\s-ti-\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
