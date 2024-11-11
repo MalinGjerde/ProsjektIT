@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sentral", "sentral\sentral.csproj", "{89148A59-90F8-4D4C-9FBE-91C7325F2BE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kortleser_program", "Kortleser_program\Kortleser_program.csproj", "{DF9AAD46-4DCF-4195-83E0-B7C2FFC4773B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89148A59-90F8-4D4C-9FBE-91C7325F2BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89148A59-90F8-4D4C-9FBE-91C7325F2BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89148A59-90F8-4D4C-9FBE-91C7325F2BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89148A59-90F8-4D4C-9FBE-91C7325F2BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF9AAD46-4DCF-4195-83E0-B7C2FFC4773B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9AAD46-4DCF-4195-83E0-B7C2FFC4773B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9AAD46-4DCF-4195-83E0-B7C2FFC4773B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF9AAD46-4DCF-4195-83E0-B7C2FFC4773B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAA316F2-3A31-42BC-B978-B64D3DFA5AD3}
+	EndGlobalSection
+EndGlobal
