@@ -327,9 +327,7 @@ namespace sentral
                     else 
                     {
                         return false;
-                    }
-                    cmd.Parameters.AddWithValue("pinKode", pinKode);
-                   
+                    } 
                     //må legge inn noe som sjekker om kortID og PIN stemmer overns med det som er i databasen og gir en true tilbake
                 }
             }
@@ -502,17 +500,17 @@ namespace sentral
         static void LeggTilKortleser(string connString)
         {
             Console.WriteLine("Nummer:");
-            var nummer = Console.ReadLine();
+            var Nummer = Console.ReadLine();
             Console.WriteLine("Plassering:");
-            var plassering = Console.ReadLine();
+            var Plassering = Console.ReadLine();
 
             using (var conn = new NpgsqlConnection(connString))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("INSERT INTO Kortleser (Nummer, Plassering) VALUES (@nummer, @plassering)", conn))
+                using (var cmd = new NpgsqlCommand("INSERT INTO Kortleser (Nummer, Plassering) VALUES (@Nummer, @Plassering)", conn))
                 {
-                    cmd.Parameters.AddWithValue("nummer", nummer);
-                    cmd.Parameters.AddWithValue("plassering", plassering);
+                    cmd.Parameters.AddWithValue("Nummer", Nummer);
+                    cmd.Parameters.AddWithValue("Plassering", Plassering);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -521,14 +519,14 @@ namespace sentral
         static void SlettKortleser(string connString)
         {
             Console.WriteLine("Nummer:");
-            var nummer = Console.ReadLine();
+            var Nummer = Console.ReadLine();
 
             using (var conn = new NpgsqlConnection(connString))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("DELETE FROM Kortleser WHERE Nummer = @nummer", conn))
+                using (var cmd = new NpgsqlCommand("DELETE FROM Kortleser WHERE Nummer = @Nummer", conn))
                 {
-                    cmd.Parameters.AddWithValue("nummer", nummer);
+                    cmd.Parameters.AddWithValue("Nummer", Nummer);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -537,17 +535,17 @@ namespace sentral
         static void EndreKortleser(string connString)
         {
             Console.WriteLine("Nummer:");
-            var nummer = Console.ReadLine();
+            var Nummer = Console.ReadLine();
             Console.WriteLine("Ny plassering:");
-            var plassering = Console.ReadLine();
+            var Plassering = Console.ReadLine();
 
             using (var conn = new NpgsqlConnection(connString))
             {
                 conn.Open();
-                using (var cmd = new NpgsqlCommand("UPDATE Kortleser SET Plassering = @plassering WHERE Nummer = @nummer", conn))
+                using (var cmd = new NpgsqlCommand("UPDATE Kortleser SET Plassering = @Plassering WHERE Nummer = @Nummer", conn))
                 {
-                    cmd.Parameters.AddWithValue("plassering", plassering);
-                    cmd.Parameters.AddWithValue("nummer", nummer);
+                    cmd.Parameters.AddWithValue("Plassering", Plassering);
+                    cmd.Parameters.AddWithValue("Nummer", Nummer);
                     cmd.ExecuteNonQuery();
                 }
             }
