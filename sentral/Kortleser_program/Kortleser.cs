@@ -75,8 +75,8 @@ namespace Kortleser_program
 
             while (!ferdig)
             {
-                Console.Write("Tast inn kommando: ");
                 Console.WriteLine("1. Scan kort");
+                Console.Write("Tast inn kommando: ");
                 string dataFraBruker = "";
                 dataFraBruker = Console.ReadLine();
 
@@ -88,10 +88,6 @@ namespace Kortleser_program
                     //legge inn spesifike kommandoer som skal sendes til seriel og ikkje server default er å sende til server
                     case "avslutt":
                         ferdig = true;
-                        break;
-
-                    case "dør":
-                        døråpen = false;
                         break;
 
                     case "1":
@@ -119,47 +115,11 @@ namespace Kortleser_program
                         break;
 
                     default:
-                        //bool altOK = SendData(dataFraBruker, clientSocket);
-
-                        //if (altOK)
-                        //{
-                        //    dataFraServer = MottaData(clientSocket);
-
-
-                        //    Console.Write("Svar fra server: ");
-                        //    Console.WriteLine(dataFraServer);
-                        //    BehandleDataFraServer(dataFraServer);
-
-                        //}
+                        Console.WriteLine("Ugyldig kommando");
                         
                         break;
                         
                 }
-
-                //if (dataFraBruker == "avslutt")
-                //{
-                //    ferdig = true;
-                //}
-                //else if (dataFraBruker.Length > 0)
-                //{
-                //    bool altOK = SendData(dataFraBruker, clientSocket);
-
-                //    if (altOK)
-                //    {
-                //        dataFraServer = MottaData(clientSocket);
-
-
-                //        Console.Write("Svar fra server: ");
-                //        Console.WriteLine(dataFraServer);
-
-                //    }
-                //    else
-                //    {
-                //        Console.WriteLine("Avslutter klientprogram");
-                //        ferdig = true;
-
-                //    }
-                //}
             }
 
             Console.WriteLine("Bryter forbindelsen med serveren ...");
@@ -174,41 +134,66 @@ namespace Kortleser_program
             {
                 Console.WriteLine("Låser opp dør....");
                 //if (e5 == false)
-
                 //SendMelding("$O01", serialPort);
 
                 Thread dør = new Thread(DørÅpen);
-                døråpen = true;
                 dør.Start();
-                //legge inn kode som sender rette seriel kommando for å aktivere dør e5
-                //Thread.Sleep(2000);
-                //legge inn kode som sender rette seriel kommando for å deaktivere dør e5
-                //så lenge e6 dør er lukket så skal den låses igjen
-                //Console.WriteLine("Låser dør......");
-                    
+
             }
+            else
+                Console.WriteLine("Tilgang Avslått");
         }
 
         static void DørÅpen()
         {
+            bool opened = false;
             alarm_door_open = false;
-            Tidgått.Start();
-            //bytte true med kortet sin data for åpen dør
-            while (e6 == true)
+
+            while (e5)
             {
-                if (Tidgått.ElapsedMilliseconds >= 5000 && !alarm_door_open)
+                Tidgått.Start();
+
+                //Venter på at døren skal bli åpnet
+                while (e6)
                 {
-                    Console.WriteLine("Alarm har gått");
-                    //Console.BackgroundColor;
-                    
-                    alarm_door_open = true;
+                    if (!opened)
+                    {
+                        Tidgått.Restart();
+                        opened = true;
+                    }
+
+                    //Setter av alarm om dør er åpen lenger en gitt tid
+                    if (Tidgått.ElapsedMilliseconds >= 5000 && !alarm_door_open)
+                    {
+                        Console.WriteLine("Alarm har gått");
+                        //Console.BackgroundColor;
+
+                        alarm_door_open = true;
+                    }
+
                 }
-                
+
+                //Resetter alarm når dør er lukket
+                alarm_door_open = false;
+
+                //Sender melding om å låse dør igjen visst den har vært åpenet etter den er låst opp
+                if (opened == true)
+                {
+                    //SendMelding("$O00", serialPort);
+                    Console.WriteLine("Låser dør......");
+                }
+
+                Console.WriteLine("Dør lukket, alarm deaktivert");
+                //Låser dør igjen visst den ikkje er åpnet ila 10 sekunder fra den er låst opp
+                if (Tidgått.ElapsedMilliseconds >= 10000 && e6 == false)
+                {
+                    //SendMelding("$O00", serialPort);
+                    Console.WriteLine("Låser dør......");
+                }
+                //skal gi alarm om døren er åpen for lenge
             }
-            alarm_door_open = false;
             Tidgått.Restart();
-            Console.WriteLine("Dør lukket, alarm deaktivert");
-            //skal gi alarm om døren er åpen for lenge
+            Tidgått.Stop();
 
         }
 
