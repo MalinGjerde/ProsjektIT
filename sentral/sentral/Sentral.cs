@@ -111,19 +111,22 @@ namespace sentral
                             // Sjekk at PIN (andre del) ikke er null eller tom
                             if (!string.IsNullOrEmpty(deler[1]))
                             {
+                               
                                 string pin = deler[1];
-                                bool tilgang = SjekkTilgang(kortID, pin);
-
-                                if (tilgang == true)
-                                {
-                                    string svar = "Tilgang godkjent";
-                                    SendData(svar, kommSokkel);
-                                }
-                                else if (tilgang == false)
-                                {
-                                    string svar = "tilgang ikkje godkjent";
-                                    SendData(svar, kommSokkel);
-                                }
+                                bool tilgang = ValiderKortIDPin(connString,kortID,pin);
+                                LoggInnpasseringsforesporsel(connString, kortID, pin, tilgang);
+                                string svar = (tilgang ? "Tilgang godkjent" : "Tilgang Avslått");
+                                SendData(svar, kommSokkel);
+                                //if (tilgang == true)
+                                //{
+                                //    string svar = "Tilgang godkjent";
+                                //    SendData(svar, kommSokkel);
+                                //}
+                                //else if (tilgang == false)
+                                //{
+                                //    string svar = "tilgang ikkje godkjent";
+                                //    SendData(svar, kommSokkel);
+                                //}
 
                             }
                             else
@@ -259,7 +262,7 @@ namespace sentral
                     string pin = cmd.ExecuteScalar().ToString();
                     if (pinKode == pin)
                     {
-                        Console.WriteLine("Godkjent");
+                        //Console.WriteLine("Godkjent");
                         return true;
                     }
                     else 
