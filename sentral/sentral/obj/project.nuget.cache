@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ivo6VS8jHDQ=",
+  "dgSpecHash": "z7JPJalzgf+l32PT+3fzErBuuOZOGDauJ2jO9MlZE8vyngq577JMrmS6e1TlKusdCAsiHNvdiYo+t4jCg29pcA==",
   "success": true,
-  "projectFilePath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\s-ti-\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\s-ti-\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\s-ti-\\.nuget\\packages\\npgsql\\8.0.5\\npgsql.8.0.5.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\henri\\Source\\Repos\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

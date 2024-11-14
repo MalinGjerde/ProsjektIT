@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj": {}
+    "C:\\Users\\henri\\Source\\Repos\\ProsjektIT\\sentral\\sentral\\sentral.csproj": {}
   },
   "projects": {
-    "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj": {
+    "C:\\Users\\henri\\Source\\Repos\\ProsjektIT\\sentral\\sentral\\sentral.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\Source\\Repos\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
         "projectName": "sentral",
-        "projectPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
-        "packagesPath": "C:\\Users\\s-ti-\\.nuget\\packages\\",
-        "outputPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\obj\\",
+        "projectPath": "C:\\Users\\henri\\Source\\Repos\\ProsjektIT\\sentral\\sentral\\sentral.csproj",
+        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\henri\\Source\\Repos\\ProsjektIT\\sentral\\sentral\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\s-ti-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,22 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Npgsql": {
-              "target": "Package",
-              "version": "[8.0.5, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -61,12 +50,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
