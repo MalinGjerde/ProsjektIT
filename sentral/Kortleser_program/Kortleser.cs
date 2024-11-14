@@ -16,7 +16,7 @@ namespace Kortleser_program
         static bool døråpen = false;
         private static Socket clientSocket;
         private static SerialPort serialPort;
-
+        
 
         //test
         static bool e5;
