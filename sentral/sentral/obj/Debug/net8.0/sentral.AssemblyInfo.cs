@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sentral")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b474e15e90bcb9d792d2bdc53e7acd8765c222b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82338c86239a79ffd8329597a4bde303786d32bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("sentral")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sentral")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

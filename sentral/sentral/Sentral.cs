@@ -7,12 +7,7 @@ namespace sentral
 {
     class Sentral
     {
-        static List<Kort> gyldigeKort = new List<Kort>
-        {
-            new Kort { KortID = "1111", PIN = "0000" },
-            new Kort { KortID = "2222", PIN = "1111" },
-            new Kort { KortID = "3333", PIN = "2222" }
-        };
+
         static string connString;
         static bool isRunning;
         static bool Kort_validering = false;
@@ -156,21 +151,7 @@ namespace sentral
             kommSokkel.Close();
         }
 
-        // Metode for å sjekke om en KortID og PIN er gyldig
-        static bool SjekkTilgang(string kortID, string pin)
-        {
-            foreach (var kort in gyldigeKort)
-            {
-                if (kort.KortID == kortID && kort.PIN == pin)
-                {
-                    Console.WriteLine($"Tilgang godkjent for KortID {kortID}.");
-                    return true;
-                }
-            }
 
-            Console.WriteLine($"Tilgang avslått for KortID {kortID}.");
-            return false;
-        }
 
         // Metode for å sende data til klienten
         static bool SendData(string data, Socket s)
