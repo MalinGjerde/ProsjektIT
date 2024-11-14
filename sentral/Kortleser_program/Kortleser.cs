@@ -4,6 +4,7 @@ using System.Text;
 using System.IO.Ports;
 using System.Diagnostics;
 using System.Diagnostics.SymbolStore;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace Kortleser_program
@@ -22,6 +23,8 @@ namespace Kortleser_program
         static bool e5;
         static bool e6;
         static bool e7;
+        static bool alarm_;
+        static bool alarm_door_open;
         static void Main(string[] args)
         {
             Tidgått = new Stopwatch();
@@ -188,31 +191,103 @@ namespace Kortleser_program
 
         static void DørÅpen()
         {
-            bool alarmaktiv = false;
-            Console.WriteLine("tid startet");
+            alarm_door_open = false;
             Tidgått.Start();
             //bytte true med kortet sin data for åpen dør
-            while (døråpen)
+            while (e6 == true)
             {
-                if (Tidgått.ElapsedMilliseconds >= 5000 && !alarmaktiv)
+                if (Tidgått.ElapsedMilliseconds >= 5000 && !alarm_door_open)
                 {
                     Console.WriteLine("Alarm har gått");
                     //Console.BackgroundColor;
                     
-                    alarmaktiv = true;
+                    alarm_door_open = true;
                 }
                 
             }
-            alarmaktiv = false;
+            alarm_door_open = false;
             Tidgått.Restart();
             Console.WriteLine("Dør lukket, alarm deaktivert");
             //skal gi alarm om døren er åpen for lenge
 
         }
 
-        static bool Avlest_e5()
+
+        //Kode for å lese av verdier til de 3 digital I/O vi skal bruke
+        static bool Avlest_e5(string s)
         {
             bool svar = false;
+            int indeksTempStart = s.IndexOf('D');
+
+            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 1, 2));
+
+            if (avlest == 1)
+            {
+                svar = true;
+                e5 = true;
+            }
+            else
+            {
+                e5 = false;
+            }
+            return svar;
+        }
+
+        static bool Avlest_e6(string s)
+        {
+            bool svar = false;
+            int indeksTempStart = s.IndexOf('D');
+
+            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 2, 3));
+
+            if (avlest == 1)
+            {
+                svar = true;
+                e6 = true;
+            }
+            else
+            {
+                e6 = false;
+            }
+            return svar;
+        }
+
+        static bool Avlest_e7(string s)
+        {
+            bool svar = false;
+            int indeksTempStart = s.IndexOf('D');
+
+            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 3, 4));
+
+            if (avlest == 1)
+            {
+                svar = true;
+                e7 = true;
+            }
+            else
+            {
+                e7 = false;
+            }
+            return svar;
+        }
+
+        //KOden som skal returner en alarm visst slideren viser en verdi over 500
+        static bool alarm_slider(string s)
+        {
+            bool svar = false;
+            int indeksTempStart = s.IndexOf('F');
+
+            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 1, 4));
+
+            if (avlest > 500)
+            {
+                svar = true;
+                alarm_ = true;
+            }
+            else
+            {
+                alarm_ = false;
+            }
             return svar;
         }
 
@@ -281,15 +356,33 @@ namespace Kortleser_program
             {
                 while (serialPort.IsOpen)
                 {
-                    string serialData = serialPort.ReadLine();
+                    //string serialData = serialPort.ReadLine();
+                    string serialData = "";
                     Console.WriteLine("Received from serial port: " + serialData);
 
+                    Thread.Sleep(200);
+                    serialData = serialData + MottaData(serialPort);
+
+                    if (EnHelMeldingMotatt(serialData))
+                    {
+                        string enMelding = HentUtEnMelding(ref serialData);
+                        Console.WriteLine("Data fra SimSim: " + enMelding);
+
+                        Avlest_e5(enMelding);
+                        Avlest_e6(enMelding);
+                        Avlest_e7(enMelding);
+                        alarm_slider(enMelding);
+
+                    }
                     // Send the data to the server
                     //Bytte denne koden ut slik at kortleser program håndtere data og sender kun alarmer til server
-                    byte[] data = Encoding.ASCII.GetBytes(serialData);
-                    if (clientSocket.Connected)
+
+                    if (e7 || alarm_ || alarm_door_open == true)
                     {
-                        clientSocket.Send(data);
+                        if (clientSocket.Connected)
+                        {
+                            SendData("Alarm",clientSocket);
+                        }
                     }
                 }
             }
@@ -314,6 +407,8 @@ namespace Kortleser_program
 
             return svar;
         }
+
+
 
         static bool EnHelMeldingMotatt(string data)
         {

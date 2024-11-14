@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "9QiVoP8qa9qS2vhBCZK7F2T9IPFwHMwNt3MHHL5/0NFEMuaBjQ73O31mGKzS6yGAErMjExIwcutyZsoiK/oCZg==",
+  "dgSpecHash": "mVK10w3hmO4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\henri\\Source\\Repos\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\s-ti-\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\s-ti-\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\s-ti-\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\s-ti-\\.nuget\\packages\\runtime.native.system.io.ports\\8.0.0\\runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\s-ti-\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\s-ti-\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\s-ti-\\.nuget\\packages\\system.io.ports\\8.0.0\\system.io.ports.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
