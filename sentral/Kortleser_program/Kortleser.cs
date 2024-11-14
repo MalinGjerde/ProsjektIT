@@ -146,7 +146,7 @@ namespace Kortleser_program
                 Console.WriteLine("Låser opp dør....");
                 //if (e5 == false)
 
-                //SendMelding("$E0", serialPort);
+                //SendMelding("$O01", serialPort);
 
                 Thread dør = new Thread(DørÅpen);
                 døråpen = true;

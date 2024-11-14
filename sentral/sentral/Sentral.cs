@@ -205,14 +205,6 @@ namespace sentral
         }
         static void Bruker_input(object o)
         {
-            Thread.Sleep(500);
-            //string innput = "";
-            //string fornavn;
-            //string etternavn;
-            //string epost;
-            //string kortid;
-            //string gyldighet;
-            //string pin;
 
             while (true)
             {
@@ -253,63 +245,8 @@ namespace sentral
                 }
             }
 
-            //innput = Console.ReadLine();
-            //    switch (innput.ToLower())
-            //    {
-            //        case "ny bruker":
-                        
-            //            Console.Write("Fornavn: ");
-            //            fornavn = Console.ReadLine();
-                        
-            //            Console.Write("Etternavn: ");
-            //            etternavn = Console.ReadLine();
-                        
-            //            Console.Write("epost-adresse: ");
-            //            epost = Console.ReadLine();
-                        
-            //            Console.Write("kortID(4 siffer): ");
-            //            kortid = Console.ReadLine();
-                        
-            //            Console.Write("Gyldighet(dd.mm.yyyy): ");
-            //            gyldighet = Console.ReadLine();
-                        
-            //            Console.Write("pin kode(4 siffer): ");
-            //            pin = Console.ReadLine();
 
-            //            //Kode som legger det inn i database
-            //            break;
-
-            //        case "slett bruker":
-
-            //            Console.Write("Oppgi kortID på bruker som skal slettes: ");
-            //            Console.ReadLine();
-
-            //            //Oppgi bruke som skal slettes
-
-            //            //kode som sletter bruker fra database
-            //            break;
-
-            //        case "endre bruker":
-
-            //            Console.Write("Oppgi hvilken brukes som skal endres: ");
-            //            Console.ReadLine();
-            //            //Ny switch case for flere valg her?
-            //            //Oppgi hvilken bruker som skal endres
-            //            //hva som skal endres
-
-            //            //kode som gjør endring i database
-
-            //            break;
-
-            //        default:
-            //            Console.WriteLine("Ikkje godkjent kommando");
-            //            Console.WriteLine("Komandoer som kan skrives er: ny bruker, slett bruker, endre bruker");
-            //            //lister opp gyldige kommandoer
-            //            break;
-
-
-            //    }
-            }
+        }
         
         static bool ValiderKortIDPin(string connString, string kortId, string pinKode)
         {
@@ -319,7 +256,8 @@ namespace sentral
                 using (var cmd = new NpgsqlCommand("SELECT PIN FROM Bruker WHERE KortID = @kortId", conn))
                 {
                     cmd.Parameters.AddWithValue("kortId", kortId);
-                    if (pinKode == cmd.ExecuteReader().Read().ToString())
+                    string pin = cmd.ExecuteScalar().ToString();
+                    if (pinKode == pin)
                     {
                         Console.WriteLine("Godkjent");
                         return true;

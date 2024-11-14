@@ -51,3 +51,23 @@ C:\Users\malin\OneDrive\Dokumenter\New folder\sentral\sentral\obj\Debug\net8.0\r
 C:\Users\malin\OneDrive\Dokumenter\New folder\sentral\sentral\obj\Debug\net8.0\sentral.pdb
 C:\Users\malin\OneDrive\Dokumenter\New folder\sentral\sentral\obj\Debug\net8.0\sentral.genruntimeconfig.cache
 C:\Users\malin\OneDrive\Dokumenter\New folder\sentral\sentral\obj\Debug\net8.0\ref\sentral.dll
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\bin\Debug\net8.0\sentral.exe
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\bin\Debug\net8.0\sentral.deps.json
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\bin\Debug\net8.0\sentral.runtimeconfig.json
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\bin\Debug\net8.0\sentral.dll
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\bin\Debug\net8.0\sentral.pdb
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\bin\Debug\net8.0\Npgsql.dll
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.csproj.AssemblyReference.cache
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.GeneratedMSBuildEditorConfig.editorconfig
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.AssemblyInfoInputs.cache
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.AssemblyInfo.cs
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.csproj.CoreCompileInputs.cache
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.sourcelink.json
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.csproj.Up2Date
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.dll
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\refint\sentral.dll
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.pdb
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\sentral.genruntimeconfig.cache
+D:\ELE301 - Industriell IT\ProsjektIT\sentral\sentral\obj\Debug\net8.0\ref\sentral.dll

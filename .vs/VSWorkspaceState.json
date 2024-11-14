@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Kortleser",
-    "\\Sentral_Program"
+    "\\sentral",
+    "\\sentral\\Kortleser_program"
   ],
-  "SelectedNode": "\\Sentral_Program\\Sentral_Program.csproj",
+  "SelectedNode": "\\sentral\\sentral.sln",
   "PreviewInSolutionExplorer": false
 }
