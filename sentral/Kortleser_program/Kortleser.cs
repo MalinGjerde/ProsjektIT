@@ -72,12 +72,14 @@ namespace Kortleser_program
 
             while (!ferdig)
             {
-                Console.Write("Oppgi data som skal sendes til server: ");
+                Console.Write("Tast inn kommando: ");
+                Console.WriteLine("1. Scan kort");
                 string dataFraBruker = "";
                 dataFraBruker = Console.ReadLine();
 
                 //lage en switch struktur med forventet innputs?
 
+               
                 switch (dataFraBruker.ToLower())
                 {
                     //legge inn spesifike kommandoer som skal sendes til seriel og ikkje server default er å sende til server
@@ -88,10 +90,17 @@ namespace Kortleser_program
                     case "dør":
                         døråpen = false;
                         break;
-                    
 
-                    default:
-                        bool altOK = SendData(dataFraBruker, clientSocket);
+                    case "1":
+
+                        Console.Write("Tast inn kort ID: ");
+                        string KortID = Console.ReadLine();
+
+                        Console.Write("Tast inn PIN: ");
+                        string PIN = Console.ReadLine();
+
+                        string Kortscann = $"{KortID}-{PIN}";
+                        bool altOK = SendData(Kortscann, clientSocket);
 
                         if (altOK)
                         {
@@ -103,6 +112,23 @@ namespace Kortleser_program
                             BehandleDataFraServer(dataFraServer);
 
                         }
+
+                        break;
+
+                    default:
+                        //bool altOK = SendData(dataFraBruker, clientSocket);
+
+                        //if (altOK)
+                        //{
+                        //    dataFraServer = MottaData(clientSocket);
+
+
+                        //    Console.Write("Svar fra server: ");
+                        //    Console.WriteLine(dataFraServer);
+                        //    BehandleDataFraServer(dataFraServer);
+
+                        //}
+                        
                         break;
                         
                 }

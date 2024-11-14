@@ -93,7 +93,7 @@ namespace sentral
                     }
 
 
-
+                    //Alternativ legge inn en annen måte data i fra kortleser kommer inn
                     // Sjekker KortID og PIN
                     var deler = dataFraKlient.Split('-');
                     if (deler.Length == 2)
@@ -112,6 +112,7 @@ namespace sentral
                                 LoggInnpasseringsforesporsel(connString, kortID, pin, tilgang);
                                 string svar = (tilgang ? "Tilgang godkjent" : "Tilgang Avslått");
                                 SendData(svar, kommSokkel);
+                                Console.WriteLine($"KortID:{kortID} har fått: {svar}");
                                 //if (tilgang == true)
                                 //{
                                 //    string svar = "Tilgang godkjent";
@@ -232,6 +233,7 @@ namespace sentral
 
         }
         
+        //Kode som validere innlest kortid og pin opp mot database
         static bool ValiderKortIDPin(string connString, string kortId, string pinKode)
         {
             using (var conn = new NpgsqlConnection(connString))
@@ -255,6 +257,7 @@ namespace sentral
             }
         }
 
+        //Logfører innpassering
         static void LoggInnpasseringsforesporsel(string connString, string kortId, string pinKode, bool godkjent)
         {
             using (var conn = new NpgsqlConnection(connString))
