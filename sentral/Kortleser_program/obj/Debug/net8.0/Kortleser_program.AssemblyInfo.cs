@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kortleser_program")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a639477c44481e1c2edb0d39479fa26747b17e77")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91f165a93844d460390d8188a4df5c390c55973e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kortleser_program")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kortleser_program")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

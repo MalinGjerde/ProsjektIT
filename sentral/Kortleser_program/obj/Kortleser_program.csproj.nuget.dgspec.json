@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj": {}
+    "C:\\Users\\malin\\OneDrive\\Dokumenter\\New folder\\sentral\\Kortleser_program\\Kortleser_program.csproj": {}
   },
   "projects": {
-    "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj": {
+    "C:\\Users\\malin\\OneDrive\\Dokumenter\\New folder\\sentral\\Kortleser_program\\Kortleser_program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
+        "projectUniqueName": "C:\\Users\\malin\\OneDrive\\Dokumenter\\New folder\\sentral\\Kortleser_program\\Kortleser_program.csproj",
         "projectName": "Kortleser_program",
-        "projectPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\Kortleser_program.csproj",
-        "packagesPath": "C:\\Users\\s-ti-\\.nuget\\packages\\",
-        "outputPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\Kortleser_program\\obj\\",
+        "projectPath": "C:\\Users\\malin\\OneDrive\\Dokumenter\\New folder\\sentral\\Kortleser_program\\Kortleser_program.csproj",
+        "packagesPath": "C:\\Users\\malin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\malin\\OneDrive\\Dokumenter\\New folder\\sentral\\Kortleser_program\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\s-ti-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\malin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
