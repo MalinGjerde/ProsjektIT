@@ -1,0 +1,63 @@
+E:\Und\IndIT\KompEks\SimSim\SimSim\bin\Debug\SimSim.exe
+E:\Und\IndIT\KompEks\SimSim\SimSim\bin\Debug\SimSim.pdb
+E:\Und\IndIT\KompEks\SimSim\SimSim\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Und\IndIT\KompEks\SimSim\SimSim\obj\x86\Debug\SimSim.MainForm.resources
+E:\Und\IndIT\KompEks\SimSim\SimSim\obj\x86\Debug\SimSim.Properties.Resources.resources
+E:\Und\IndIT\KompEks\SimSim\SimSim\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Und\IndIT\KompEks\SimSim\SimSim\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Und\IndIT\KompEks\SimSim\SimSim\obj\x86\Debug\SimSim.exe
+E:\Und\IndIT\KompEks\SimSim\SimSim\obj\x86\Debug\SimSim.pdb
+C:\Users\hib\Desktop\SimSim\SimSim\obj\x86\Debug\SimSim.exe
+C:\Users\hib\Desktop\SimSim\SimSim\obj\x86\Debug\SimSim.pdb
+C:\Users\hib\Desktop\SimSim\SimSim\bin\Debug\SimSim.exe
+C:\Users\hib\Desktop\SimSim\SimSim\bin\Debug\SimSim.pdb
+C:\Users\hib\Desktop\SimSim\SimSim\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\hib\Desktop\SimSim\SimSim\obj\x86\Debug\SimSim.MainForm.resources
+C:\Users\hib\Desktop\SimSim\SimSim\obj\x86\Debug\SimSim.Properties.Resources.resources
+C:\Users\hib\Desktop\SimSim\SimSim\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\hib\Desktop\SimSim\SimSim\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Adis\Desktop\SimSim\SimSim\obj\x86\Debug\SimSim.exe
+C:\Users\Adis\Desktop\SimSim\SimSim\obj\x86\Debug\SimSim.pdb
+C:\Users\Adis\Desktop\SimSim\SimSim\bin\Debug\SimSim.exe
+C:\Users\Adis\Desktop\SimSim\SimSim\bin\Debug\SimSim.pdb
+C:\Users\Adis\Desktop\SimSim\SimSim\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Adis\Desktop\SimSim\SimSim\obj\x86\Debug\SimSim.MainForm.resources
+C:\Users\Adis\Desktop\SimSim\SimSim\obj\x86\Debug\SimSim.Properties.Resources.resources
+C:\Users\Adis\Desktop\SimSim\SimSim\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Adis\Desktop\SimSim\SimSim\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\obj\x86\Debug\SimSim.exe
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\obj\x86\Debug\SimSim.pdb
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\bin\Debug\SimSim.exe
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\bin\Debug\SimSim.pdb
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\obj\x86\Debug\SimSim.MainForm.resources
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\obj\x86\Debug\SimSim.Properties.Resources.resources
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Adis\Desktop\Forelesning\SimSim\SimSim\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\obj\x86\Debug\SimSim.exe
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\obj\x86\Debug\SimSim.pdb
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\bin\Debug\SimSim.exe
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\bin\Debug\SimSim.pdb
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\obj\x86\Debug\SimSim.MainForm.resources
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\obj\x86\Debug\SimSim.Properties.Resources.resources
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\arbeid\TOE058\Sesnsorkort\SimSim\SimSim\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Arbeid\0-ELE301\Oppgaver\NSemesteroppgave\SimSim\SimSim\SimSim\bin\Debug\SimSim.exe
+C:\Arbeid\0-ELE301\Oppgaver\NSemesteroppgave\SimSim\SimSim\SimSim\bin\Debug\SimSim.pdb
+C:\Arbeid\0-ELE301\Oppgaver\NSemesteroppgave\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.csprojAssemblyReference.cache
+C:\Arbeid\0-ELE301\Oppgaver\NSemesteroppgave\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.MainForm.resources
+C:\Arbeid\0-ELE301\Oppgaver\NSemesteroppgave\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.Properties.Resources.resources
+C:\Arbeid\0-ELE301\Oppgaver\NSemesteroppgave\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.csproj.GenerateResource.cache
+C:\Arbeid\0-ELE301\Oppgaver\NSemesteroppgave\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.exe
+C:\Arbeid\0-ELE301\Oppgaver\NSemesteroppgave\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.pdb
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\bin\Debug\SimSim.exe.config
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\bin\Debug\SimSim.exe
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\bin\Debug\SimSim.pdb
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.csproj.AssemblyReference.cache
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.MainForm.resources
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.Properties.Resources.resources
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.csproj.GenerateResource.cache
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.csproj.CoreCompileInputs.cache
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.exe
+D:\ELE301 - Industriell IT\SimSim-v2\SimSim\SimSim\SimSim\obj\x86\Debug\SimSim.pdb
