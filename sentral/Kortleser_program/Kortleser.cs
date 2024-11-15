@@ -28,10 +28,9 @@ namespace Kortleser_program
         static void Main(string[] args)
         {
             Tidgått = new Stopwatch();
-            e5 = false;
-            e6 = false;
-            e7 = false;
 
+
+            //Kode fo å oppgi kortleser nummer burde vært sendt til server for registrering av korlesernummer med romnummer
             Console.WriteLine("Oppgi kortlesernummer(xxxx): " );
             kortlesernummer = Console.ReadLine();
 
@@ -64,6 +63,7 @@ namespace Kortleser_program
 
         static void BrukerInput()
         {
+            //Setter opp komunikasjon med server burde være en try catch her
             IPEndPoint l = clientSocket.LocalEndPoint as IPEndPoint;
             IPEndPoint r = clientSocket.RemoteEndPoint as IPEndPoint;
             VisKommunikasjonsinformasjon(l, r);
@@ -80,12 +80,11 @@ namespace Kortleser_program
                 string dataFraBruker = "";
                 dataFraBruker = Console.ReadLine();
 
-                //lage en switch struktur med forventet innputs?
-
+                
                
                 switch (dataFraBruker.ToLower())
                 {
-                    //legge inn spesifike kommandoer som skal sendes til seriel og ikkje server default er å sende til server
+                    //Her kan det legges inn flere valg som kan gjøres på kortleser for bruker innput eks. endre kortlesernummer eller manuell aktivering av alrm for test osv.
                     case "avslutt":
                         ferdig = true;
                         break;
@@ -128,6 +127,7 @@ namespace Kortleser_program
             Console.ReadKey();
         }
 
+        //Metode som leser data i fra server og behandler den, for nå ser den bare om kortet og pin er godkjent eller ikkje godkjent
         static void BehandleDataFraServer(string s)
         {
             if (s.ToLower() == "tilgang godkjent")
@@ -144,6 +144,7 @@ namespace Kortleser_program
                 Console.WriteLine("Tilgang Avslått");
         }
 
+        //Metode/tråd for å håndter når døren blir låst opp og om den står for lenge åpen
         static void DørÅpen()
         {
             bool opened = false;
@@ -280,6 +281,7 @@ namespace Kortleser_program
             return svar;
         }
 
+        //Metode for å sende data til server
         static bool SendData(string data, Socket s)
         {
             bool svar = true;
@@ -297,6 +299,7 @@ namespace Kortleser_program
             return svar;
         }
 
+        //Metode for å motta data fra server
         static string MottaData(Socket s)
         {
             string svar = "";
@@ -312,6 +315,8 @@ namespace Kortleser_program
             }
             return svar;
         }
+
+        //Metode for oppkobling av server
         static void KobleTilServer(string ipAddress, int port)
         {
             try
@@ -326,6 +331,7 @@ namespace Kortleser_program
             }
         }
 
+        //Metode for å åpne seriel port
         static void OpenSerialPort(string portName, int baudRate)
         {
             try
@@ -339,6 +345,8 @@ namespace Kortleser_program
                 Console.WriteLine("Error opening serial port: " + e.Message);
             }
         }
+
+        //Metode/tråd for å lese av data i seriel bufferet og behandle de
         static void BehandleSerielData()
         {
             bool alarmsendt = false;
@@ -356,9 +364,9 @@ namespace Kortleser_program
                     if (EnHelMeldingMotatt(serialData))
                     {
                         string enMelding = HentUtEnMelding(ref serialData);
-                        //Console.WriteLine("Data fra SimSim: " + enMelding);
+                        
 
-
+                        //Sjekker digitale utgangene i simsim
                         if (Avlest_e5(enMelding) == true)
                             e5 = true;
                         else
@@ -380,21 +388,22 @@ namespace Kortleser_program
                             alarm_ = false;
                         
                     }
-                    // Send the data to the server
-                    //Bytte denne koden ut slik at kortleser program håndtere data og sender kun alarmer til server
                     
+                    
+                    //aktivere alar og sender det til server
                     if ((e7 || alarm_ || alarm_door_open == true) && alarmsendt == false)
                     {
                         if (clientSocket.Connected)
                         {
                             Console.WriteLine("Alarm aktiv");
-                            SendData("Alarm",clientSocket);
+                            SendData("Alarm aktiv",clientSocket);
                             alarmsendt = true;
                         }
                     }
                     else if (!e7 && !alarm_ && !alarm_door_open && alarmsendt == true)
                     {
                         Console.WriteLine("Alarm deaktivert");
+                        SendData("Alarm deaktivert", clientSocket);
                         alarmsendt = false;
                     }
                 }
@@ -404,6 +413,8 @@ namespace Kortleser_program
                 Console.WriteLine("Serial port read error: " + e.Message);
             }
         }
+
+        //Metode for å hente ut en melding i fra seriel buffer
         static string HentUtEnMelding(ref string data)
         {
             string svar = "";
@@ -422,7 +433,7 @@ namespace Kortleser_program
         }
 
 
-
+        //Metode for å sjekke om det er en hel melding som blir hentet ut
         static bool EnHelMeldingMotatt(string data)
         {
             bool svar = false;
@@ -438,6 +449,7 @@ namespace Kortleser_program
             return svar;
         }
 
+        //Metode for å hente ut data i fra seriel bufferet
         static string MottaData(SerialPort s)
         {
             string svar = "";
@@ -454,6 +466,7 @@ namespace Kortleser_program
             return svar;
         }
 
+        //Metode for å sende melding på seriel bufferet
         static void SendMelding(string enMelding, SerialPort s)
         {
             try
