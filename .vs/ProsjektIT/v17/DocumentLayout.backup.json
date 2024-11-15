@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\ELE301 - Industriell IT\\ProsjektIT\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\Sentral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sentral\\sentral\\Sentral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ELE301 - Industriell IT\\ProsjektIT\\Sentral_Program\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Sentral_Program\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Sentral.cs",
+              "DocumentMoniker": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\Sentral.cs",
+              "RelativeDocumentMoniker": "sentral\\sentral\\Sentral.cs",
+              "ToolTip": "D:\\ELE301 - Industriell IT\\ProsjektIT\\sentral\\sentral\\Sentral.cs",
+              "RelativeToolTip": "sentral\\sentral\\Sentral.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:43:03.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ELE301 - Industriell IT\\ProsjektIT\\Sentral_Program\\Program.cs",
               "RelativeDocumentMoniker": "Sentral_Program\\Program.cs",

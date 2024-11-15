@@ -40,7 +40,7 @@ namespace Kortleser_program
             KobleTilServer("127.0.0.1", 9050);
 
             // åpne seriel port om den er tilgjenlig legg in rett com port
-            OpenSerialPort("COM1", 9600);
+            OpenSerialPort("COM4", 9600);
 
             // Start a thread to listen for data from the serial port
             Thread serialThread = new Thread(new ThreadStart(BehandleSerielData));
@@ -133,8 +133,8 @@ namespace Kortleser_program
             if (s.ToLower() == "tilgang godkjent")
             {
                 Console.WriteLine("Låser opp dør....");
-                //if (e5 == false)
-                //SendMelding("$O01", serialPort);
+                if (e5 == false)
+                SendMelding("$O51", serialPort);
 
                 Thread dør = new Thread(DørÅpen);
                 dør.Start();
@@ -148,53 +148,71 @@ namespace Kortleser_program
         {
             bool opened = false;
             alarm_door_open = false;
-
-            while (e5)
+            bool ferdig = false;
+            bool meldingsendt = false;
+            while (!ferdig)
             {
-                Tidgått.Start();
+                Thread.Sleep(500);
 
-                //Venter på at døren skal bli åpnet
-                while (e6)
+                while (e5 == true)
                 {
-                    if (!opened)
+                    Tidgått.Start();
+                    //Console.WriteLine("Dør låst opp");
+                    //Venter på at døren skal bli åpnet
+                    while (e6 == true)
                     {
-                        Tidgått.Restart();
-                        opened = true;
+                        if (!opened)
+                        {
+                            Tidgått.Restart();
+                            opened = true;
+                        }
+                        //Console.WriteLine("Dør Åpent åpnet");
+                        //Setter av alarm om dør er åpen lenger en gitt tid
+                        if (Tidgått.ElapsedMilliseconds >= 5000 && !alarm_door_open)
+                        {
+                            //Console.WriteLine("Alarm har gått");
+                            //Console.BackgroundColor;
+
+                            alarm_door_open = true;
+                        }
+
                     }
 
-                    //Setter av alarm om dør er åpen lenger en gitt tid
-                    if (Tidgått.ElapsedMilliseconds >= 5000 && !alarm_door_open)
-                    {
-                        Console.WriteLine("Alarm har gått");
-                        //Console.BackgroundColor;
+                    //Resetter alarm når dør er lukket
+                    alarm_door_open = false;
 
-                        alarm_door_open = true;
+                    //Sender melding om å låse dør igjen visst den har vært åpenet etter den er låst opp
+                    if (opened == true)
+                    {
+                        if (!meldingsendt)
+                        {
+                            SendMelding("$O50", serialPort);
+                            meldingsendt = true;
+                            Console.WriteLine("Låser dør......");
+                        }
+                        
+                        Thread.Sleep(1000);
+                        ferdig = true;
                     }
 
+                  
+                    //Låser dør igjen visst den ikkje er åpnet ila 10 sekunder fra den er låst opp
+                    if (Tidgått.ElapsedMilliseconds >= 10000 && e6 == false)
+                    {
+                        if (!meldingsendt)
+                        {
+                            SendMelding("$O50", serialPort);
+                            meldingsendt = true;
+                            Console.WriteLine("Låser dør......");
+                        }
+                        Thread.Sleep(1000);
+                        ferdig = true;
+                    }
+                    //skal gi alarm om døren er åpen for lenge
                 }
-
-                //Resetter alarm når dør er lukket
-                alarm_door_open = false;
-
-                //Sender melding om å låse dør igjen visst den har vært åpenet etter den er låst opp
-                if (opened == true)
-                {
-                    //SendMelding("$O00", serialPort);
-                    Console.WriteLine("Låser dør......");
-                }
-
-                Console.WriteLine("Dør lukket, alarm deaktivert");
-                //Låser dør igjen visst den ikkje er åpnet ila 10 sekunder fra den er låst opp
-                if (Tidgått.ElapsedMilliseconds >= 10000 && e6 == false)
-                {
-                    //SendMelding("$O00", serialPort);
-                    Console.WriteLine("Låser dør......");
-                }
-                //skal gi alarm om døren er åpen for lenge
+                Tidgått.Restart();
+                Tidgått.Stop();
             }
-            Tidgått.Restart();
-            Tidgått.Stop();
-
         }
 
 
@@ -202,57 +220,48 @@ namespace Kortleser_program
         static bool Avlest_e5(string s)
         {
             bool svar = false;
-            int indeksTempStart = s.IndexOf('D');
+            int avlesseriellstreng = s.IndexOf('E');
 
-            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 1, 2));
+            int avlest = Convert.ToInt32(s.Substring(avlesseriellstreng + 6, 1));
+
+            
 
             if (avlest == 1)
-            {
+            
                 svar = true;
-                e5 = true;
-            }
-            else
-            {
-                e5 = false;
-            }
+
             return svar;
         }
 
         static bool Avlest_e6(string s)
         {
             bool svar = false;
-            int indeksTempStart = s.IndexOf('D');
+            int indeksTempStart = s.IndexOf('E');
 
-            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 2, 3));
+            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 7, 1));
+
+           
 
             if (avlest == 1)
-            {
+            
                 svar = true;
-                e6 = true;
-            }
-            else
-            {
-                e6 = false;
-            }
             return svar;
+
         }
 
         static bool Avlest_e7(string s)
         {
             bool svar = false;
-            int indeksTempStart = s.IndexOf('D');
+            int indeksTempStart = s.IndexOf('E');
 
-            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 3, 4));
+            int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 8, 1));
+
+            
 
             if (avlest == 1)
-            {
+            
                 svar = true;
-                e7 = true;
-            }
-            else
-            {
-                e7 = false;
-            }
+
             return svar;
         }
 
@@ -264,15 +273,10 @@ namespace Kortleser_program
 
             int avlest = Convert.ToInt32(s.Substring(indeksTempStart + 1, 4));
 
+            
+
             if (avlest > 500)
-            {
                 svar = true;
-                alarm_ = true;
-            }
-            else
-            {
-                alarm_ = false;
-            }
             return svar;
         }
 
@@ -337,13 +341,14 @@ namespace Kortleser_program
         }
         static void BehandleSerielData()
         {
+            bool alarmsendt = false;
             try
             {
                 while (serialPort.IsOpen)
                 {
                     //string serialData = serialPort.ReadLine();
                     string serialData = "";
-                    Console.WriteLine("Received from serial port: " + serialData);
+                    
 
                     Thread.Sleep(200);
                     serialData = serialData + MottaData(serialPort);
@@ -351,23 +356,46 @@ namespace Kortleser_program
                     if (EnHelMeldingMotatt(serialData))
                     {
                         string enMelding = HentUtEnMelding(ref serialData);
-                        Console.WriteLine("Data fra SimSim: " + enMelding);
+                        //Console.WriteLine("Data fra SimSim: " + enMelding);
 
-                        Avlest_e5(enMelding);
-                        Avlest_e6(enMelding);
-                        Avlest_e7(enMelding);
-                        alarm_slider(enMelding);
 
+                        if (Avlest_e5(enMelding) == true)
+                            e5 = true;
+                        else
+                            e5 = false;
+
+                        if (Avlest_e6(enMelding))
+                            e6 = true;
+                        else
+                            e6 = false;
+
+                        if (Avlest_e7(enMelding))
+                            e7 = true;
+                        else
+                            e7 = false;
+
+                        if (alarm_slider(enMelding))
+                            alarm_ = true;
+                        else
+                            alarm_ = false;
+                        
                     }
                     // Send the data to the server
                     //Bytte denne koden ut slik at kortleser program håndtere data og sender kun alarmer til server
-
-                    if (e7 || alarm_ || alarm_door_open == true)
+                    
+                    if ((e7 || alarm_ || alarm_door_open == true) && alarmsendt == false)
                     {
                         if (clientSocket.Connected)
                         {
+                            Console.WriteLine("Alarm aktiv");
                             SendData("Alarm",clientSocket);
+                            alarmsendt = true;
                         }
+                    }
+                    else if (!e7 && !alarm_ && !alarm_door_open && alarmsendt == true)
+                    {
+                        Console.WriteLine("Alarm deaktivert");
+                        alarmsendt = false;
                     }
                 }
             }
